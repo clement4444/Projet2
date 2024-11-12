@@ -1,0 +1,37 @@
+.filtreBar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: .5em;
+}
+h2 {
+  font-size: medium;
+  text-align: center;
+  margin: .5em;
+}
+.h2Color {
+  color: #92c3a0;
+}
+.searchBar {
+  border-radius: 15px;
+  width: 80%;
+  border: #00653f .2em solid;
+}
+.arrival {
+  border-radius: 15px;
+  border: #00653f .2em solid;
+}
+.departure {
+  border-radius: 15px;
+  border: #00653f .2em solid;
+}
+.filtre {
+  border-radius: 15px;
+  width: 30%;
+  border: #00653f .2em solid;
+}
+.ligne {
+  margin: 20px 20px;
+  border-top: 1px solid black;
+}
