@@ -1,0 +1,11 @@
+footer {
+  background-color: #4bab77;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerGauche {
+  background-color: #00653f;
+  display: flex;
+  flex-direction: column;
+}

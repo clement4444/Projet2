@@ -1,0 +1,12 @@
+/* toute section carte */
+.carte {
+  display: flex;
+  justify-content: center;
+}
+
+/* la carte */
+.carte img {
+  width: 80%;
+  height: auto;
+  margin-bottom: 1.5em;
+}
