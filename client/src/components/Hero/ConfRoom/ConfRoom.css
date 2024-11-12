@@ -1,0 +1,8 @@
+.imgConf {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.descriConf {
+    font-family: krub;
+    text-align: center;
+}
