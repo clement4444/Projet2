@@ -1,0 +1,24 @@
+.presRoom {
+  display: flex;
+  flex-direction: column;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.tarif {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.toBook {
+  margin: .5em;
+  border-radius: 15px;
+  width: 100px;
+  height: 25px;
+  background-color: #ffbb00;
+}
+.ligne {
+  margin: 20px 20px;
+  border-top: 1px solid black;
+}
