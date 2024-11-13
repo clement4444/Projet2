@@ -1,4 +1,8 @@
 import "./FilterBar.css";
+import Arrival from "./Arrival/Arrival";
+import Departure from "./Departure/Departure";
+import Filter from "./Filter/Filter";
+import Search from "./Search/Search";
 
 const FilterBar = () => {
   return (
@@ -6,17 +10,13 @@ const FilterBar = () => {
       <h2>
         Réserver une <span className="h2Color">chambre</span>
       </h2>
+
       <div className="filtreBar">
-        <input
-          type="text"
-          placeholder="Votre chambre"
-          className="searchBar"
-        ></input>
-        <input type="date" className="arrival"></input>
-        <input type="date" className="departure"></input>
-        <button className="filtre">Filtrer</button>
+        <Search />
+        <Arrival />
+        <Departure />
+        <Filter />
       </div>
-      <div className="ligne"></div>
     </div>
   );
 };
