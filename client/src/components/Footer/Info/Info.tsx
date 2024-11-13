@@ -12,14 +12,24 @@ function Info() {
         <p>Arrivée : 15h / Départ: 11h</p>
       </div>
       <div className="logoResaux">
+      <a 
+      href="https://www.instagram.com/" 
+      target="_blank">
         <img
           src="../../../../public/resaux/logoInstagram.png"
           alt="logo instagram"
-        />
+          />
+        </a>
+
+      <a
+          href="https://www.facebook.com/" 
+          target="_blank">
         <img
           src="../../../../public/resaux/logoFacebook.png"
           alt="logo facebook"
-        />
+          />
+        </a>
+
       </div>
     </div>
   );
