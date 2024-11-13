@@ -3,7 +3,7 @@ import "./PresRoom.css";
 const PresRoom = () => {
   return (
     <div className="presRoom">
-      <div className="room">
+      <div id="rooms" className="room">
         <img src="../../../src/assets/images/ConfRoom.png" alt="Chambre" />
       </div>
       <div className="description">
