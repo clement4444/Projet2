@@ -1,5 +1,6 @@
 import { createContext } from "react";
 
+//verifi api
 type ApiContextType = {
   api: unknown;
 };

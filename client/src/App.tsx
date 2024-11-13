@@ -6,13 +6,18 @@ import Hero from "./components/Hero/Hero";
 import "./App.css";
 
 function App() {
+  //state de api
   const [api, setApi] = useState({});
 
   useEffect(() => {
+    //function pour mettre api une foie le fetche fait
     function setAnnonces(data: unknown) {
+      //verifi que c'est un objet
       if (Array.isArray(data)) {
+        //met api
         setApi(data);
       } else {
+        //message eurreur dans le cas ou c'est pas un objet
         console.error("Les données ne sont pas un tableau");
       }
     }
