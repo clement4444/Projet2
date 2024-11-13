@@ -1,23 +1,35 @@
 import "./PresRoom.css";
 
+import BedNb from "./BedNb/BedNb";
+import Descri from "./Descri/Descri";
+import LikeButton from "./LikeButton/LikeButton";
+import NameRoom from "./NameRoom/NameRoom";
+import Notation from "./Notation/Notation";
+import OptionRoom from "./OptionRoom/OptionRoom";
+import PictureRoom from "./PictureRoom/PictureRoom";
+import Price from "./Price/Price";
+import ReservedButton from "./ReservedButton/ReservedButton";
+import Separator from "./Separator/Separator";
+
 const PresRoom = () => {
   return (
     <div className="presRoom">
-      <div className="room">
-        <img src="../../../src/assets/images/ConfRoom.png" alt="Chambre" />
-      </div>
+      <Separator />
+      <PictureRoom />
       <div className="description">
-        <p>NbrPers</p>
-        <p>NameRoom</p>
+        <BedNb />
+        <NameRoom />
         <p>Strasbourg, France</p>
-        <p>Description</p>
-        <p>évaluation</p>
+        <OptionRoom />
+        <Descri />
+        <Notation />
       </div>
+      <LikeButton />
       <div className="tarif">
-        <p>Prix</p>
-        <button className="toBook">Réserver</button>
+        <Price />
+        <ReservedButton />
       </div>
-      <div className="ligne"></div>
+      <Separator />
     </div>
   );
 };
