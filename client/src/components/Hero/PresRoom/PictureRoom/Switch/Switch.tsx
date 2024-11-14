@@ -1,16 +1,22 @@
 import { useContext } from "react";
+import CopieApiContext from "../../../../Context/CopieApi";
 import IndexRoomContext from "../../../../Context/IndexRoom";
 
 const Switch = ({ direction }: { direction: string }) => {
   // Vérification que le contexte n'est pas null
-  const context = useContext(IndexRoomContext);
-
-  if (!context) {
+  const contextIndex = useContext(IndexRoomContext);
+  if (!contextIndex) {
     // Retourner un message d'erreur ou gérer l'absence de contexte
     throw new Error("IndexRoomContext non valide");
   }
+  const { indexRoom, setIndexRoom } = contextIndex;
 
-  const { indexRoom, setIndexRoom } = context;
+  //récupéré copie API
+  const contextCopieApi = useContext(CopieApiContext);
+  if (!contextCopieApi) {
+    throw new Error("IndexRoomContext non valide");
+  }
+  const { copieApi } = contextCopieApi;
 
   let classElement = "";
   let valeurElement = "";
@@ -31,11 +37,23 @@ const Switch = ({ direction }: { direction: string }) => {
     setIndexRoom(indexRoom + incementation);
   };
 
+  //prédit le prochain index
+  const indexRoomSuivant = indexRoom + incementation;
+  //verifie que le prochain index est pas plus grand que le nb de chambre
+  const isPossible =
+    indexRoomSuivant >= 0 && indexRoomSuivant <= copieApi.length - 1;
+
   return (
     <>
-      <button className={`${classElement}`} onClick={handleClick} type="button">
-        {valeurElement}
-      </button>
+      {isPossible && (
+        <button
+          className={`${classElement}`}
+          onClick={handleClick}
+          type="button"
+        >
+          {valeurElement}
+        </button>
+      )}
     </>
   );
 };
