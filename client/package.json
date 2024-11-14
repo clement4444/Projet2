@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "check-types": "tsc --noEmit",
-    "dev": "vite --host",
+    "dev": "vite --host", 
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
