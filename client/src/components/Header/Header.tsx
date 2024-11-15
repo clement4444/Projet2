@@ -6,7 +6,7 @@ const Header: React.FC = () => {
     <div className="header-container">
       <header className="header">
         <img
-          src="public/images_header/strasgite_logo.jpg"
+          src="public/images/images_header/strasgite_logo.jpg"
           id="logo"
           alt="Logo"
         />
@@ -27,7 +27,7 @@ const Header: React.FC = () => {
       </header>
       <div className="chateau">
         <img
-          src="public/images_header/chateau.jpeg"
+          src="public/images/images_header/chateau.jpeg"
           alt="Château"
           className="chateau-image"
         />

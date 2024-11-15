@@ -4,7 +4,7 @@ const ConfRoom = () => {
   return (
     <div className="imgConf">
       <img
-        src="../../../src/assets/images/ConfRoom.png"
+        src="./public/images/ConfRoom/ConfRoom.png"
         alt="salle de conférence"
       />
       <p className="descriConf">

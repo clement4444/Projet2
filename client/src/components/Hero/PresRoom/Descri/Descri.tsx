@@ -1,10 +1,14 @@
+import { UseCopieApiContext } from "../../../../hooks/UseCopieApi";
+import { UseIndexRoomContext } from "../../../../hooks/UseIndexRoom";
+
 const Descri = () => {
+  //récupé le contexte index
+  const { indexRoom } = UseIndexRoomContext();
+  //récupé le contexte api
+  const { copieApi } = UseCopieApiContext();
   return (
     <>
-      <p>
-        “Un style loft avec des murs en briques apparentes et des meubles en
-        métal”
-      </p>
+      <p>{copieApi[indexRoom].description}</p>
     </>
   );
 };

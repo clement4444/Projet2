@@ -1,22 +1,11 @@
-import { useContext } from "react";
-import CopieApiContext from "../../../../Context/CopieApi";
-import IndexRoomContext from "../../../../Context/IndexRoom";
+import { UseCopieApiContext } from "../../../../../hooks/UseCopieApi";
+import { UseIndexRoomContext } from "../../../../../hooks/UseIndexRoom";
 
 const Switch = ({ direction }: { direction: string }) => {
-  // Vérification que le contexte n'est pas null
-  const contextIndex = useContext(IndexRoomContext);
-  if (!contextIndex) {
-    // Retourner un message d'erreur ou gérer l'absence de contexte
-    throw new Error("IndexRoomContext non valide");
-  }
-  const { indexRoom, setIndexRoom } = contextIndex;
-
-  //récupéré copie API
-  const contextCopieApi = useContext(CopieApiContext);
-  if (!contextCopieApi) {
-    throw new Error("IndexRoomContext non valide");
-  }
-  const { copieApi } = contextCopieApi;
+  //récupé le contexte index
+  const { indexRoom, setIndexRoom } = UseIndexRoomContext();
+  //récupé le contexte api
+  const { copieApi } = UseCopieApiContext();
 
   let classElement = "";
   let valeurElement = "";

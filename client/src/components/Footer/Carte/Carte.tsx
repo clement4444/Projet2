@@ -3,7 +3,7 @@ import "./Carte.css";
 function Carte() {
   return (
     <div className="carte">
-      <img src="../../../../public/map/mapTrajet.png" alt="Carte du trajet" />
+      <img src="./public/images/map/mapTrajet.png" alt="Carte du trajet" />
     </div>
   );
 }
