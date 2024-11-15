@@ -14,14 +14,14 @@ function Info() {
       <div className="logoResaux">
         <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
           <img
-            src="../../../../public/resaux/logoInstagram.png"
+            src="./public/images/resaux/logoInstagram.png"
             alt="logo instagram"
           />
         </a>
 
         <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
           <img
-            src="../../../../public/resaux/logoFacebook.png"
+            src="./public/images/resaux/logoFacebook.png"
             alt="logo facebook"
           />
         </a>

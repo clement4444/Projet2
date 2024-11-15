@@ -1,6 +1,6 @@
-import { ApiProvider } from "./components/Context/Api";
-import { CopieApiProvider } from "./components/Context/CopieApi";
-import { IndexRoomProvider } from "./components/Context/IndexRoom";
+import { ApiProvider } from "./Context/Api";
+import { CopieApiProvider } from "./Context/CopieApi";
+import { IndexRoomProvider } from "./Context/IndexRoom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
