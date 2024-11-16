@@ -1,0 +1,19 @@
+.option {
+  display: flex;
+  align-items: center;
+}
+
+.iconOption {
+  font-size: 2em;
+}
+
+.texteOption {
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: inline;
+    font-size: 1.6em;
+    box-sizing: content-box;
+    padding-left: 0.4em;
+  }
+}

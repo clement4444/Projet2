@@ -1,0 +1,27 @@
+.presRoom .contenerPicture button {
+  font-size: 5em;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  z-index: 10;
+  top: 35%;
+
+  @media screen and (min-width: 1024px) {
+    top: 40%;
+  }
+}
+
+/* hover */
+.presRoom .contenerPicture button:hover {
+  color: #ffbb00;
+}
+
+.presRoom .contenerPicture .flecheGauche {
+  left: 5px;
+}
+
+.presRoom .contenerPicture .flecheDroite {
+  right: 5px;
+}

@@ -1,5 +1,6 @@
 import { UseCopieApiContext } from "../../../../../hooks/UseCopieApi";
 import { UseIndexRoomContext } from "../../../../../hooks/UseIndexRoom";
+import "./Switch.css";
 
 const Switch = ({ direction }: { direction: string }) => {
   //récupé le contexte index
@@ -13,11 +14,11 @@ const Switch = ({ direction }: { direction: string }) => {
 
   if (direction === "gauche") {
     classElement = "flecheGauche";
-    valeurElement = "⬅️";
+    valeurElement = "<";
     incementation = -1;
   } else if (direction === "droite") {
-    classElement = "flecheGauche";
-    valeurElement = "➡️";
+    classElement = "flecheDroite";
+    valeurElement = ">";
     incementation = 1;
   }
 

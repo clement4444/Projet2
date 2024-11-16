@@ -1,5 +1,6 @@
 import { UseCopieApiContext } from "../../../../hooks/UseCopieApi";
 import { UseIndexRoomContext } from "../../../../hooks/UseIndexRoom";
+import "./BedNb.css";
 
 const BedNb = () => {
   //récupé le contexte index
@@ -8,7 +9,7 @@ const BedNb = () => {
   const { copieApi } = UseCopieApiContext();
 
   return (
-    <div className="room">
+    <div className="roomNb">
       <p>1 chambre • {copieApi[indexRoom].capacite} personnes</p>
     </div>
   );
