@@ -14,8 +14,10 @@ const IconOption = ({ numeros }: { numeros: number }) => {
 
   //useEffect qui re donne une chance a image exiter a chaque changement
   useEffect(() => {
-    setImageExists(true); //met image en mod exite
-  }, []);
+    if (indexRoom > -1) {
+      setImageExists(true); //met image en mod exite
+    }
+  }, [indexRoom]);
 
   //fuction eurreur qui change le state de image en case de crash
   const handleError = () => {
