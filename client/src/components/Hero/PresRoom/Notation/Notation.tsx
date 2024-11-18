@@ -1,7 +1,11 @@
+import "./Notation.css";
+
 const Notation = () => {
   return (
     <>
-      <p>⭐4.8 (12 evaluations)</p>
+      <p className="roomNotes">
+        <strong>⭐</strong> 4.8 (12 evaluations)
+      </p>
     </>
   );
 };

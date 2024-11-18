@@ -13,24 +13,32 @@ import Separator from "./Separator/Separator";
 
 const PresRoom = () => {
   return (
-    <div className="presRoom">
+    <>
       <Separator />
-      <PictureRoom />
-      <div className="description">
-        <BedNb />
-        <NameRoom />
-        <p>Strasbourg, France</p>
-        <OptionRoom />
-        <Descri />
-        <Notation />
-      </div>
-      <LikeButton />
-      <div className="tarif">
-        <Price />
-        <ReservedButton />
+      <div className="presRoom">
+        <PictureRoom />
+        <div className="infoRoom">
+          <div className="description">
+            <BedNb />
+            <NameRoom />
+            <p className="RoomLieux">Strasbourg, France</p>
+            <OptionRoom />
+          </div>
+          <div className="roomBas">
+            <section>
+              <Descri />
+              <Notation />
+            </section>
+            <div className="tarif">
+              <Price />
+              <ReservedButton />
+            </div>
+          </div>
+          <LikeButton />
+        </div>
       </div>
       <Separator />
-    </div>
+    </>
   );
 };
 

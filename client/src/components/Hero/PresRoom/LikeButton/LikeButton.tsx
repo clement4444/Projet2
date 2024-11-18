@@ -1,7 +1,9 @@
+import "./LikeButton.css";
+
 const LikeButton = () => {
   return (
     <>
-      <p>❤️</p>
+      <p className="likeButton">🤍</p>
     </>
   );
 };

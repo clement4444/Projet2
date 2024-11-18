@@ -1,3 +1,5 @@
+import "./ReservedButton.css";
+
 const ReservedButton = () => {
   return (
     <>

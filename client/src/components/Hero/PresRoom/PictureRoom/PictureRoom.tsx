@@ -1,6 +1,7 @@
 import { UseCopieApiContext } from "../../../../hooks/UseCopieApi";
 import { UseIndexRoomContext } from "../../../../hooks/UseIndexRoom";
 import Switch from "./Switch/Switch";
+import "./PictureRoom.css";
 
 const PictureRoom = () => {
   //récupé le contexte index
@@ -9,9 +10,9 @@ const PictureRoom = () => {
   const { copieApi } = UseCopieApiContext();
 
   return (
-    <div className="room">
+    <div className="contenerPicture">
       <Switch direction="gauche" />
-      <img src={`${copieApi[indexRoom].image_url}`} alt="Chambre" />
+      <img id="imageChanbre" src={copieApi[indexRoom].image_url} alt="" />
       <Switch direction="droite" />
     </div>
   );
