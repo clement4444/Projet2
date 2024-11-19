@@ -5,6 +5,7 @@
   border: 0.1px black solid;
   border-radius: 50px;
   margin-top: 0.8em;
+  transition: all 0.5s;
 
   @media screen and (min-width: 1024px) {
     font-size: 2em;
@@ -14,4 +15,5 @@
 
 .toBook:hover {
   background-color: #45a049;
+  transition: all 0.5s;
 }
