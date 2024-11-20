@@ -1,10 +1,12 @@
 import { useEffect } from "react";
 import { UseApiContext } from "../../../hooks/UseApi";
 import { UseCopieApiContext } from "../../../hooks/UseCopieApi";
+import { UseIndexRoomContext } from "../../../hooks/UseIndexRoom";
 
 const appliFilter = (optionCocher: string[], textSearchBar: string) => {
-  const { setCopieApi } = UseCopieApiContext();
+  const { copieApi, setCopieApi } = UseCopieApiContext();
   const { api } = UseApiContext();
+  const { indexRoom, setIndexRoom } = UseIndexRoomContext();
 
   //actualiser la copi api a chaque modification
   useEffect(() => {
@@ -24,12 +26,35 @@ const appliFilter = (optionCocher: string[], textSearchBar: string) => {
     });
     //parti recharche-------------------------------------------
     newApi = newApi.filter((chambre) =>
-      chambre.nom.toLowerCase().includes(textSearchBar),
+      chambre.nom.toLowerCase().includes(textSearchBar.toLowerCase()),
     );
 
-    //applique les filtre
+    // parti changer index de la chambre-------------------------
+    //verifer que la newApi n'est pas vide
+    if (newApi.length > 0 && copieApi.length > 0) {
+      //recupere l'id de la chambre actuel
+      const idRoom = copieApi[indexRoom].id;
+      //recupere l'emplacement de la chambre dans la liste en fonction de l'id
+      const newIdRoom = newApi.findIndex((chambre) => chambre.id === idRoom);
+      //si la chambre a été sup par le filtre repartire de 0
+      if (newIdRoom === -1) {
+        setIndexRoom(0);
+      } else {
+        setIndexRoom(newIdRoom);
+      }
+    }
+
+    //applique les filtre---------------------------------------
     setCopieApi(newApi);
-  }, [optionCocher, api, setCopieApi, textSearchBar]);
+  }, [
+    optionCocher,
+    api,
+    setCopieApi,
+    copieApi,
+    textSearchBar,
+    setIndexRoom,
+    indexRoom,
+  ]);
 };
 
 export default appliFilter;
