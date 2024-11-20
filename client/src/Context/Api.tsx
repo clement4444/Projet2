@@ -36,7 +36,7 @@ export const ApiProvider: React.FC<IndexRoomProviderProps> = ({ children }) => {
   // État de l'API avec une valeur initiale
   const premierChambre: Chambre[] = [
     {
-      id: 0,
+      id: 1,
       nom: "",
       description: "",
       emplacement: "",

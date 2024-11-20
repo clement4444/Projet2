@@ -3,20 +3,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5em 0em 1.5em 0em;
 
   @media screen and (min-width: 1024px) {
     width: 35%;
+    padding: 2em 2em 2em 0em;
   }
 }
 
 /* la carte */
-.carte img {
-  width: 90%;
-  margin-bottom: 1.5em;
+#map {
+  width: 100%;
+  height: 80vh;
+  border: 2px solid #333;
+  border-radius: 0;
 
   @media screen and (min-width: 1024px) {
     width: 90%;
-    height: auto;
+    height: 100%;
+    border-radius: 8px;
   }
 }
