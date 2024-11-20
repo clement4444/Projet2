@@ -1,10 +1,19 @@
+import { useState } from "react";
 import "./FilterBar.css";
 import Arrival from "./Arrival/Arrival";
 import Departure from "./Departure/Departure";
 import Filter from "./Filter/Filter";
 import Search from "./Search/Search";
+import appliFilter from "./appliFilter.tsx";
 
 const FilterBar = () => {
+  // state des option cocher
+  const [optionCocher, setOptionCocher] = useState<string[]>([]);
+  //state de la barre de recherche
+  const [textSearchBar, setTextSearchBar] = useState("");
+  //apliquer les filtre
+  appliFilter(optionCocher, textSearchBar);
+
   return (
     <div>
       <h2>
@@ -12,10 +21,13 @@ const FilterBar = () => {
       </h2>
 
       <div className="filtreBar">
-        <Search />
+        <Search
+          textSearchBar={textSearchBar}
+          setTextSearchBar={setTextSearchBar}
+        />
         <Arrival />
         <Departure />
-        <Filter />
+        <Filter optionCocher={optionCocher} setOptionCocher={setOptionCocher} />
       </div>
     </div>
   );
