@@ -3,7 +3,7 @@ import "./NotFind.css";
 const NotFind = () => {
   return (
     <>
-      <p>aucun resultat trouver</p>
+      <p>aucun resultat trouvé</p>
     </>
   );
 };

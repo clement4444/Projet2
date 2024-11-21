@@ -1,6 +1,8 @@
 import "./PresRoom.css";
 
+import { UseApiContext } from "../../../hooks/UseApi";
 import { UseCopieApiContext } from "../../../hooks/UseCopieApi";
+import ApiNotFind from "./ApiNotFind/ApiNotFind";
 import BedNb from "./BedNb/BedNb";
 import Descri from "./Descri/Descri";
 import LikeButton from "./LikeButton/LikeButton";
@@ -42,10 +44,23 @@ const sectionPresRoom = (
 const PresRoom = () => {
   //récupères copie api
   const { copieApi } = UseCopieApiContext();
+  //récupéré api pour voi si elle a chager
+  const { apiCrash } = UseApiContext();
+
+  function afficherPresRoom() {
+    if (!apiCrash) {
+      if (copieApi.length > 0) {
+        return sectionPresRoom;
+      }
+      return <NotFind />;
+    }
+    return <ApiNotFind />;
+  }
+
   return (
     <>
       <Separator />
-      {copieApi.length > 0 ? sectionPresRoom : <NotFind />}
+      {afficherPresRoom()}
       <Separator />
     </>
   );
