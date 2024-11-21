@@ -67,7 +67,7 @@ function creeData(): LocalDataType {
       reservation: [
         {
           id: 1,
-        }
+        },
       ],
     },
   ];
