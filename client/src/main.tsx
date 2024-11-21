@@ -9,6 +9,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import MesReservations from "./pages/MesReservations";
 import Reserve from "./pages/Reserve";
+
+import { BakOfficeProvider } from "./Context/BakOffice";
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
 
@@ -45,7 +47,9 @@ if (rootElement == null) {
 // Render the app inside the root element
 createRoot(rootElement).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <BakOfficeProvider>
+      <RouterProvider router={router} />
+    </BakOfficeProvider>
   </StrictMode>,
 );
 
