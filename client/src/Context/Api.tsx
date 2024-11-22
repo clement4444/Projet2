@@ -24,6 +24,7 @@ type Chambre = {
 type ApiContextType = {
   api: Chambre[];
   setApi: React.Dispatch<React.SetStateAction<Chambre[]>>; // Ajout de setApi ici
+  apiCrash: boolean;
 };
 
 const ApiContext = createContext<ApiContextType | null>(null);
@@ -49,6 +50,8 @@ export const ApiProvider: React.FC<IndexRoomProviderProps> = ({ children }) => {
 
   // Déclaration de l'état api
   const [api, setApi] = useState<Chambre[]>(premierChambre);
+  //déclaration API crash
+  const [apiCrash, setApiCrash] = useState<boolean>(false);
 
   //récupéré copie API
   const context = useContext(CopieApiContext);
@@ -74,11 +77,14 @@ export const ApiProvider: React.FC<IndexRoomProviderProps> = ({ children }) => {
     })
       .then((response) => response.json())
       .then((data) => apiRecuperer(data)) // Mise à jour de l'état api
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        setApiCrash(true); // Mise à jour de l'état apiCrash en cas d'erreur
+        console.error(error);
+      });
   }, [apiRecuperer]);
 
   return (
-    <ApiContext.Provider value={{ api, setApi }}>
+    <ApiContext.Provider value={{ api, setApi, apiCrash }}>
       {children}
     </ApiContext.Provider>
   );
