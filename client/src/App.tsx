@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
   return (
-    <>
+    <div>
       <IndexRoomProvider>
         <CopieApiProvider>
           <ApiProvider>
@@ -18,7 +18,7 @@ function App() {
           </ApiProvider>
         </CopieApiProvider>
       </IndexRoomProvider>
-    </>
+    </div>
   );
 }
 

@@ -2,7 +2,6 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #ffffff;
-  margin-inline-start: 42vh;
 }
 
 .app-container {
@@ -35,6 +34,7 @@ body {
   justify-content: center;
   gap: 30vh;
 }
+
 .arrivé {
   display: flex;
   flex-direction: column;
