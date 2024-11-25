@@ -20,7 +20,7 @@ function ReservedButton() {
       setBakOffice({
         ...bakOffice,
         compteConnecter: bakOffice.compteConnecter ?? null,
-        idChambreSelect: newIdChambreSelect
+        idChambreSelect: newIdChambreSelect,
       });
     }
     navigate("/reserve"); // Redirige vers la page /reserve
