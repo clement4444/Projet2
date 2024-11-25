@@ -1,4 +1,4 @@
-const btnNbnuit = () => {
+const BtnNbnuit = () => {
   return (
     <div className="nuits">
       <p>🌙</p>
@@ -26,4 +26,4 @@ const btnNbnuit = () => {
   );
 };
 
-export default btnNbnuit;
+export default BtnNbnuit;

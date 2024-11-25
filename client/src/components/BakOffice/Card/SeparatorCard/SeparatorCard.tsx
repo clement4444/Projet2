@@ -1,5 +1,5 @@
 const SeparatorCard = () => {
-  return <></>;
+  return <p>--------------------------------------</p>;
 };
 
 export default SeparatorCard;

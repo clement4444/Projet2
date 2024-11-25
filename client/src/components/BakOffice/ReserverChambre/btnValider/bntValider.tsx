@@ -1,5 +1,5 @@
-const btnNbnuit = () => {
-  return <></>;
+const BtnValider = () => {
+  return <button type="button">VALIDER MA RESERVATION</button>;
 };
 
-export default btnNbnuit;
+export default BtnValider;

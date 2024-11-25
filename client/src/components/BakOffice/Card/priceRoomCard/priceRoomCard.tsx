@@ -1,4 +1,4 @@
-const priceRoomCard = () => {
+const PriceRoomCard = () => {
   return (
     <>
       <p>Prix pour 3 nuits :</p>
@@ -9,4 +9,4 @@ const priceRoomCard = () => {
   );
 };
 
-export default priceRoomCard;
+export default PriceRoomCard;

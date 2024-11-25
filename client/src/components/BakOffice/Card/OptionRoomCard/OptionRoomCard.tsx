@@ -1,8 +1,12 @@
+import IconOptionCard from "./IconOptionCard/IconOptionCard";
+
 const OptionRoomCard = () => {
   return (
     <>
       <p>Inclus</p>
-      <ul />
+      <IconOptionCard />
+      <IconOptionCard />
+      <IconOptionCard />
     </>
   );
 };
