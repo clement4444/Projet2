@@ -27,21 +27,3 @@ const ReserveChambre = () => {
 };
 
 export default ReserveChambre;
-
-// <div className="reservation-card">
-// <div className="reservation-header">
-// <h1>RESERVATION</h1>
-// <div className="temps" />
-// </div>
-
-// <div className="details">
-// <p>1 chambre • 2 personnes</p>
-// <p className="location">Strasbourg, France</p>
-// <div className="info" />
-// </div>
-
-// <div className="reservation-footer">
-// <div className="prix" />
-// <div className="inclus" />
-// </div>
-// </div>
