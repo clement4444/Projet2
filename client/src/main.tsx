@@ -7,9 +7,9 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
+import { BakOfficeProvider } from "./Context/BakOffice";
 import MesReservations from "./pages/MesReservations";
 import ReserveChambre from "./pages/ReserveChambre";
-import { BakOfficeProvider } from "./Context/BakOffice";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder

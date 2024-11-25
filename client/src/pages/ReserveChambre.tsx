@@ -1,23 +1,27 @@
 import "./ReserveChambre.css";
+import Card from "../components/BakOffice/Card/Card";
+import CalendrierArriver from "../components/BakOffice/ReserverChambre/CalendrierArrival/CalendrierArriver";
+import CalendrierDepart from "../components/BakOffice/ReserverChambre/CalendrierDepart/CalendrierDepart";
+import BtnNbnuit from "../components/BakOffice/ReserverChambre/btnNbnuit/btnNbnuit";
+import BtnValider from "../components/BakOffice/ReserverChambre/btnValider/bntValider";
 
 const ReserveChambre = () => {
   return (
     <div className="reservation-card">
-      <header className="reservation-header">
+      <div className="reservation-header">
         <h1>RESERVATION</h1>
-        <div className="temps" />
-      </header>
+        <CalendrierDepart />
+        <CalendrierArriver />
+        <BtnNbnuit />
+      </div>
 
-      <main className="details">
-        <p>1 chambre • 2 personnes</p>
-        <p className="location">Strasbourg, France</p>
-        <div className="info" />
-      </main>
+      <div className="details">
+        <Card />
+      </div>
 
-      <footer className="reservation-footer">
-        <div className="prix" />
-        <div className="inclus" />
-      </footer>
+      <div className="reservation-footer">
+        <BtnValider />
+      </div>
     </div>
   );
 };
