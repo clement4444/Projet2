@@ -1,11 +1,11 @@
 // Définition des types pour les données
-type Reservation = {
+export type Reservation = {
   id: number;
   dateDebut?: string;
   dateFin?: string;
 };
 
-type UserData = {
+export type UserData = {
   mail: string;
   password: string;
   sex: string;
@@ -14,12 +14,16 @@ type UserData = {
   telephone: string;
   codePostal: number | null;
   ville: string;
-  idChambreSelect: number;
   reservation: Reservation[];
+  favorite: number[];
 };
 
 // Définition d'un type pour les données stockées dans LocalData
-type LocalDataType = UserData[];
+export type LocalDataType = {
+  compteConnecter: number | null;
+  idChambreSelect: number;
+  compte: UserData[];
+};
 
 // Interface pour LocalData
 interface ILocalData {
@@ -53,22 +57,28 @@ function setLocalData(donner: LocalDataType): void {
 
 // Fonction pour créer les données par défaut
 function creeData(): LocalDataType {
-  return [
-    {
-      mail: "",
-      password: "",
-      sex: "",
-      prenom: "",
-      nom: "",
-      telephone: "",
-      codePostal: null,
-      ville: "",
-      idChambreSelect: 0,
-      reservation: [
-        {
-          id: 1,
-        },
-      ],
-    },
-  ];
+  return {
+    compteConnecter: null,
+    idChambreSelect: 0,
+    compte: [
+      {
+        mail: "admin@gmail.com",
+        password: "mdp",
+        sex: "homme",
+        prenom: "projet2Admin",
+        nom: "Nom",
+        telephone: "0777777777",
+        codePostal: 18000,
+        ville: "paris",
+        reservation: [
+          {
+            id: 0,
+            dateDebut: "2021-06-01",
+            dateFin: "2021-06-10",
+          },
+        ],
+        favorite: [],
+      },
+    ],
+  };
 }
