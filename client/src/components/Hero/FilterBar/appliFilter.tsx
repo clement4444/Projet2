@@ -9,6 +9,7 @@ const appliFilter = (optionCocher: string[], textSearchBar: string) => {
   const { indexRoom, setIndexRoom } = UseIndexRoomContext();
 
   //actualiser la copi api a chaque modification
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     //parti verif option--------------------------------------
     let newApi = [...api];
@@ -46,15 +47,7 @@ const appliFilter = (optionCocher: string[], textSearchBar: string) => {
 
     //applique les filtre---------------------------------------
     setCopieApi(newApi);
-  }, [
-    optionCocher,
-    api,
-    setCopieApi,
-    copieApi,
-    textSearchBar,
-    setIndexRoom,
-    indexRoom,
-  ]);
+  }, [optionCocher, textSearchBar]);
 };
 
 export default appliFilter;
