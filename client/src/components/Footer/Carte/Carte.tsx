@@ -1,7 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./Carte.css"; // Votre fichier CSS personnalisé pour le style de la carte
 
 function Carte() {
+  const [mapFullSreen, setMapFullSreen] = useState(false); // État pour le mode plein écran
+  const [mapInstance, setMapInstance] = useState<typeof LeafletMap | null>(
+    null,
+  );
+
   useEffect(() => {
     // Vérifie que Leaflet est chargé globalement
     const L = window.L;
@@ -13,6 +18,7 @@ function Carte() {
 
     // Initialisation de la carte
     const map = L.map("map").setView([48.8566, 2.3522], 1);
+    setMapInstance(map); // Stocker l'instance de la carte
 
     // Ajouter les tuiles OpenStreetMap
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -90,9 +96,39 @@ function Carte() {
     };
   }, []);
 
+  function setClasseMap() {
+    if (mapFullSreen) {
+      return "carte mapFullScreenOn";
+    }
+    return "carte";
+  }
+
+  function setClasseButton() {
+    if (mapFullSreen) {
+      return "mapFullScreen-btn mapFullScreen-btn-on";
+    }
+    return "mapFullScreen-btn";
+  }
+
+  const toggleFullScreen = () => {
+    setMapFullSreen(!mapFullSreen); // Change l'état du mode plein écran
+    setTimeout(() => {
+      if (mapInstance) {
+        mapInstance.invalidateSize(); // Rafraîchit la carte après le changement
+      }
+    }, 300); // Délai pour que le DOM ajuste la taille
+  };
+
   return (
-    <div className="carte">
+    <div className={`${setClasseMap()}`}>
       <div id="map" />
+      <button
+        type="button"
+        className={`${setClasseButton()}`}
+        onClick={toggleFullScreen}
+      >
+        {mapFullSreen ? "\u21A9" : "\u2922"}
+      </button>
     </div>
   );
 }
