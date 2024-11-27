@@ -6,6 +6,16 @@
   gap: .5em;
 }
 
+.filterBar2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.2em 1em 0 1em;
+
+  @media screen and (min-width: 1024px) {
+    margin: 2em 2em 0 2em;
+  }
+}
+
 h2 {
   font-size: medium;
   text-align: center;

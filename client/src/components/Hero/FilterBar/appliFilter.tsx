@@ -1,12 +1,18 @@
 import { useEffect } from "react";
 import { UseApiContext } from "../../../hooks/UseApi";
+import { UseBakOfficeContext } from "../../../hooks/UseBakOffice";
 import { UseCopieApiContext } from "../../../hooks/UseCopieApi";
 import { UseIndexRoomContext } from "../../../hooks/UseIndexRoom";
 
-const appliFilter = (optionCocher: string[], textSearchBar: string) => {
+const appliFilter = (
+  optionCocher: string[],
+  textSearchBar: string,
+  likeChecked: boolean,
+) => {
   const { copieApi, setCopieApi } = UseCopieApiContext();
   const { api } = UseApiContext();
   const { indexRoom, setIndexRoom } = UseIndexRoomContext();
+  const { bakOffice } = UseBakOfficeContext();
 
   //actualiser la copi api a chaque modification
   // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
@@ -30,6 +36,22 @@ const appliFilter = (optionCocher: string[], textSearchBar: string) => {
       chambre.nom.toLowerCase().includes(textSearchBar.toLowerCase()),
     );
 
+    //parti like-----------------------------------------------
+    // verifie que il a un compte de connecter
+    if (bakOffice?.compteConnecter !== null) {
+      // si la case a cocher est cocher
+      if (likeChecked) {
+        //filtre les chambre qui sont dans les favorie
+        newApi = newApi.filter(
+          (chambre) =>
+            bakOffice?.compteConnecter !== null &&
+            bakOffice?.compte[bakOffice.compteConnecter].favorite.includes(
+              chambre.id,
+            ),
+        );
+      }
+    }
+
     // parti changer index de la chambre-------------------------
     //verifer que la newApi n'est pas vide
     if (newApi.length > 0 && copieApi.length > 0) {
@@ -47,7 +69,7 @@ const appliFilter = (optionCocher: string[], textSearchBar: string) => {
 
     //applique les filtre---------------------------------------
     setCopieApi(newApi);
-  }, [optionCocher, textSearchBar]);
+  }, [optionCocher, textSearchBar, likeChecked]);
 };
 
 export default appliFilter;

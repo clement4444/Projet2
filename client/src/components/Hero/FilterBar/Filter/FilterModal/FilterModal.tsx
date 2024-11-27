@@ -24,6 +24,8 @@ const FilterModal = ({
   setOptionCocher,
 }: FilterModalProps) => {
   const [filters] = useState(selectedEquipments);
+  //récupé le contexte index
+  const { api } = UseApiContext();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -34,8 +36,6 @@ const FilterModal = ({
   if (!isOpen) return null;
 
   //partie pour la gestion des élement
-  //récupé le contexte index
-  const { api } = UseApiContext();
 
   //récuéré tout les nom option
   const listeOptionExitante: string[] = [];
