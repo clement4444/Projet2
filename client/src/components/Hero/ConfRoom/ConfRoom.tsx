@@ -3,10 +3,7 @@ import "./ConfRoom.css";
 const ConfRoom = () => {
   return (
     <div className="imgConf">
-      <img
-        src="./public/images/ConfRoom/ConfRoom.png"
-        alt="salle de conférence"
-      />
+      <img src="/images/ConfRoom/ConfRoom.png" alt="salle de conférence" />
       <p className="descriConf">
         “Pour vos réunions et événements professionnels, nos chambres d’hôtes
         disposent de salles de conférence entièrement équipées, offrant un cadre

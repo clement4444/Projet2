@@ -11,7 +11,7 @@ const Header: React.FC = () => {
     <div className="header-container">
       <header className="header">
         <img
-          src="public/images/images_header/strasgite_logo.jpg"
+          src="/images/images_header/strasgite_logo.jpg"
           id="logo"
           alt="Logo"
         />
@@ -37,7 +37,7 @@ const Header: React.FC = () => {
       </header>
       <div className="chateau">
         <img
-          src="public/images/images_header/chateau.jpeg"
+          src="/images/images_header/chateau.jpeg"
           alt="Château"
           className="chateau-image"
         />
