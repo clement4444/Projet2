@@ -25,9 +25,9 @@ const IconOption = ({ numeros }: { numeros: number }) => {
   };
 
   //défini image normal
-  const imageNormal = `./public/images/logoOption/${copieApi[indexRoom].equipements[numeros]}.png`;
+  const imageNormal = `/images/logoOption/${copieApi[indexRoom].equipements[numeros]}.png`;
   //défini l'image de remplacement
-  const imageSecours = "./public/images/logoOption/logoOptionUniversel.png";
+  const imageSecours = "/images/logoOption/logoOptionUniversel.png";
 
   //afficher le composant que si il a le nombre élément
   if (copieApi[indexRoom].equipements.length >= numeros + 1) {
