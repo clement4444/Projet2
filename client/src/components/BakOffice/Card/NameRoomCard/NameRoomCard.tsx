@@ -1,3 +1,5 @@
+import "./NameRoomCard.css";
+
 const NameRoomCard = () => {
   return (
     <>

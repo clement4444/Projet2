@@ -2,12 +2,12 @@ import IconOptionCard from "./IconOptionCard/IconOptionCard";
 
 const OptionRoomCard = () => {
   return (
-    <>
-      <p>Inclus</p>
-      <IconOptionCard />
-      <IconOptionCard />
-      <IconOptionCard />
-    </>
+    <div className="option-room-card">
+      <p>Inclus :</p>
+      <div className="icon-grid">
+        <IconOptionCard />
+      </div>
+    </div>
   );
 };
 

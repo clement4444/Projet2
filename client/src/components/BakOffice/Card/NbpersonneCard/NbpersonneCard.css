@@ -1,0 +1,12 @@
+.Nbpersonne {
+  font-size: 2vw;
+  margin: 1vw;
+}
+
+@media (max-width: 768px) {
+  .Nbpersonne {
+    font-size: 5vw;
+    margin: 5vw auto;
+    width: 90%;
+  }
+}

@@ -1,0 +1,33 @@
+.price-total-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75vw;
+  background-color: rgb(214, 214, 214);
+  margin: 1vw;
+}
+
+.total-label {
+  font-size: 2vw;
+}
+
+.total-value {
+  font-size: 5vw;
+}
+
+@media (max-width: 768px) {
+  .price-total-card {
+    flex-direction: row;
+    width: 90%;
+    padding: 4vw;
+  }
+
+  .total-label {
+    font-size: 4vw;
+    margin-bottom: 1vw;
+  }
+}
+.total-value {
+  font-size: 3.5vw;
+  margin-bottom: 1.5vw;
+}

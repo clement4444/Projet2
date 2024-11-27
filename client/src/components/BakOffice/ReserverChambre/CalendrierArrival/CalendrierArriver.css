@@ -1,0 +1,28 @@
+.arriver {
+  display: flex;
+}
+
+.arriver img {
+  width: 0vw;
+}
+
+.arriver span {
+  font-size: 0vw;
+}
+
+.arriver input[type="date"] {
+  font-size: 2.5vw;
+  padding: 1vw;
+  background-color: transparent;
+  border: none;
+  margin-left: 1vw;
+  margin-top: -5vw;
+}
+
+@media (max-width: 1080px) {
+  .arriver input[type="date"] {
+    font-size: 7vw;
+    margin-left: 14vw;
+    margin-top: 8vh;
+  }
+}

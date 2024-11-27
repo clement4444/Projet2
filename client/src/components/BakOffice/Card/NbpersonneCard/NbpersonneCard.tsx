@@ -1,7 +1,9 @@
+import "./NbpersonneCard.css";
+
 const NbpersonneCard = () => {
   return (
     <>
-      <p>2 personnes</p>
+      <p className="Nbpersonne">2 personnes</p>
     </>
   );
 };

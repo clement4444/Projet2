@@ -1,0 +1,29 @@
+.bouton-valider {
+  background-color: #ffd900;
+  color: rgb(0, 0, 0);
+  font-size: 2vw;
+  padding: 2.5vw 2.5vw;
+  border-radius: 25vw;
+  cursor: pointer;
+  justify-content: center;
+  margin-left: 10.5vw;
+}
+
+.bouton-valider:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .bouton-valider {
+    font-size: 3vh;
+    margin-left: 10vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .bouton-valider {
+    font-size: 3vh;
+    margin-left: 1.5vh;
+    padding: 2vh;
+  }
+}

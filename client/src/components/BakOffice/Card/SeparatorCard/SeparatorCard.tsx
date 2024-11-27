@@ -1,5 +1,7 @@
+import "./SeparatorCard.css";
+
 const SeparatorCard = () => {
-  return <p>--------------------------------------</p>;
+  return <p className="ligne"/>;
 };
 
 export default SeparatorCard;

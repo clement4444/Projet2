@@ -1,3 +1,5 @@
+import "./PictureRoomCard.css";
+
 const PictureRoomCard = () => {
   return (
     <>

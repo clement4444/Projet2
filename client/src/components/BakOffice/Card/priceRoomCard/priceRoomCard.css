@@ -1,0 +1,34 @@
+.price-room-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw;
+}
+
+.price-nuit {
+  font-size: 1.35vw;
+}
+
+.price-prix {
+  font-size: 1.35vw;
+  margin-right: 2vw;
+}
+
+@media (max-width: 768px) {
+  .price-room-card {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .price-nuit {
+    font-size: 3.5vw;
+    margin: 3vw 0;
+  }
+
+  .price-prix {
+    font-size: 3vw;
+    margin: 3vw 0;
+  }
+}
