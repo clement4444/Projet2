@@ -8,6 +8,7 @@ export type Reservation = {
 export type UserData = {
   mail: string;
   password: string;
+  adresse: string;
   sex: string;
   prenom: string;
   nom: string;
@@ -67,6 +68,7 @@ function creeData(): LocalDataType {
         sex: "homme",
         prenom: "projet2Admin",
         nom: "Nom",
+        adresse: "adresse",
         telephone: "0777777777",
         codePostal: 18000,
         ville: "paris",
