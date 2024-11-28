@@ -1,24 +1,22 @@
-.option-room-card {
-  text-align: center;
-  margin: 5vw 0;
-  font-size: 2vw;
+.titreOptionRoom {
+  font-size: 1.2em;
+  font-weight: 800;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 2.5vw;
+    margin-top: 1.7vw;
+  }
 }
 
-p {
-  font-size: 2vh;
-}
-
-.icon-grid {
+.contenerOption {
+  margin-top: 0.5em;
+  margin-bottom: .2em;
   display: grid;
-  gap: 2vw;
-  justify-items: center;
-  align-items: center;
-}
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4em;
+  text-align: start;
 
-@media (max-width: 768px) {
-  .option-room-card {
-    font-size: 3vw;
-    margin: 2vw auto;
-    width: 90%;
+  @media screen and (min-width: 1024px) {
+    margin-top: .5vw;
   }
 }

@@ -1,13 +1,10 @@
-const IconOptionCard = () => {
+import "./IconOptionCard.css";
+
+const IconOptionCard = ({ option }: { option: string }) => {
   return (
-    <>
-      <li>WIFI</li>
-      <li>Salle de bain privée</li>
-      <li>Petit-déjeuner inclus</li>
-      <li>Vue sur la ville</li>
-      <li>Climatisation</li>
-      <li>TV connectée</li>
-    </>
+    <div className="contenerIcon">
+      <li className="IconCadre">{option}</li>
+    </div>
   );
 };
 

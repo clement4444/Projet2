@@ -18,7 +18,7 @@ const FilterBar = () => {
   appliFilter(optionCocher, textSearchBar, likeChecked);
 
   return (
-    <div>
+    <div id="filterBarre">
       <h2>
         Réserver une <span className="h2Color">chambre</span>
       </h2>

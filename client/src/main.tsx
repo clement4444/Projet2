@@ -7,7 +7,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
+import { ApiProvider } from "./Context/Api";
 import { BakOfficeProvider } from "./Context/BakOffice";
+import { CopieApiProvider } from "./Context/CopieApi";
+import { IndexRoomProvider } from "./Context/IndexRoom";
 import MesReservations from "./pages/MesReservations";
 import ReserveChambre from "./pages/ReserveChambre";
 
@@ -47,9 +50,15 @@ if (rootElement == null) {
 // Render the app inside the root element
 createRoot(rootElement).render(
   <StrictMode>
-    <BakOfficeProvider>
-      <RouterProvider router={router} />
-    </BakOfficeProvider>
+    <CopieApiProvider>
+      <ApiProvider>
+        <BakOfficeProvider>
+          <IndexRoomProvider>
+            <RouterProvider router={router} />
+          </IndexRoomProvider>
+        </BakOfficeProvider>
+      </ApiProvider>
+    </CopieApiProvider>
   </StrictMode>,
 );
 

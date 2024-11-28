@@ -1,16 +1,4 @@
-.room-image {
-  width: 28%;
-  max-width: 500px;
+.room-image-Card {
+  width: 45%;
   height: auto;
-  display: flex;
-  margin-left: 35vw;
-  margin-top: -10vw;
-}
-
-@media (max-width: 768px) {
-  .room-image {
-    margin: 3vw auto;
-    width: 90%;
-    height: auto;
-  }
 }

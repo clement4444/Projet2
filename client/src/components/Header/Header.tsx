@@ -30,7 +30,7 @@ const Header: React.FC = () => {
           alt="Logo"
         />
         <nav className="navbar">
-          <a href="#rooms" className="navbar-link">
+          <a href="#filterBarre" className="navbar-link">
             Nos chambres
           </a>
           {MesReservations()}

@@ -1,29 +1,20 @@
-.bouton-valider {
-  background-color: #ffd900;
-  color: rgb(0, 0, 0);
-  font-size: 2vw;
-  padding: 2.5vw 2.5vw;
-  border-radius: 25vw;
-  cursor: pointer;
-  justify-content: center;
-  margin-left: 10.5vw;
-}
+.bouton-validerReservation {
+  background-color: #ffbb00;
+  border: black 1px solid;
+  color: black;
+  font-size: 1.2em;
+  padding: 1em;
+  border-radius: 18px;
+  transition: all 0.5s;
 
-.bouton-valider:hover {
-  background-color: #45a049;
-}
-
-@media (max-width: 768px) {
-  .bouton-valider {
-    font-size: 3vh;
-    margin-left: 10vh;
+  @media screen and (min-width: 1024px) {
+    font-size: 2vw;
+    margin-top: 2vw;
   }
 }
 
-@media (max-width: 480px) {
-  .bouton-valider {
-    font-size: 3vh;
-    margin-left: 1.5vh;
-    padding: 2vh;
-  }
+.bouton-validerReservation:hover {
+  background-color: rgb(53, 185, 53);
+  transition: all 0.5s;
+  scale: 1.1;
 }

@@ -1,28 +1,37 @@
 .depart {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
+  align-items: center;
+}
+
+.departInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.depart input {
+  border: none;
+  font-size: 1.5em;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 3em;
+  }
 }
 
 .depart img {
-  width: 0vw;
-  margin-left: 2vw;
+  width: 150px;
+  height: auto;
+
+  @media screen and (min-width: 1024px) {
+    width: 300px;
+  }
 }
 
 .depart span {
-  font-size: 0vw;
-}
+  font-size: 1.4em;
 
-.depart input[type="date"] {
-  font-size: 2.5vw;
-  padding: 1vw;
-  border-radius: 4vw;
-  background-color: transparent;
-  border: none;
-}
-
-@media (max-width: 1080px) {
-  .depart input[type="date"] {
-    font-size: 7vw;
-    padding: 0vh 17vw;
+  @media screen and (min-width: 1024px) {
+    font-size: 2em;
   }
 }

@@ -1,12 +1,9 @@
-.Nbpersonne {
-  font-size: 2vw;
-  margin: 1vw;
-}
+.NbpersonneCard {
+  font-size: 1.15em;
+  margin-top: 0.3em;
 
-@media (max-width: 768px) {
-  .Nbpersonne {
-    font-size: 5vw;
-    margin: 5vw auto;
-    width: 90%;
+  @media screen and (min-width: 1024px) {
+    font-size: 3vw;
+    margin-top: .7em;
   }
 }

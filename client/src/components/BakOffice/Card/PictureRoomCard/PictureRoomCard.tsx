@@ -1,13 +1,11 @@
 import "./PictureRoomCard.css";
+import { UseApiContext } from "../../../../hooks/UseApi";
 
-const PictureRoomCard = () => {
+const PictureRoomCard = ({ index }: { index: number }) => {
+  const { api } = UseApiContext();
   return (
     <>
-      <img
-        src="https://images.pexels.com/photos/210265/pexels-photo-210265.jpeg"
-        alt="Room"
-        className="room-image"
-      />
+      <img src={api[index].image_url} alt="Room" className="room-image-Card" />
     </>
   );
 };

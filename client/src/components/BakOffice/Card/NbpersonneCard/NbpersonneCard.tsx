@@ -1,9 +1,12 @@
+import { UseApiContext } from "../../../../hooks/UseApi";
 import "./NbpersonneCard.css";
 
-const NbpersonneCard = () => {
+const NbpersonneCard = ({ index }: { index: number }) => {
+  const { api } = UseApiContext();
+
   return (
     <>
-      <p className="Nbpersonne">2 personnes</p>
+      <p className="NbpersonneCard">{api[index].capacite} personnes</p>
     </>
   );
 };
