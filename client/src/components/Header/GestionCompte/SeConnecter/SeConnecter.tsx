@@ -20,14 +20,28 @@ const SeConnecter: React.FC<SeConnecterProps> = ({
   //fonction de connection
   function connection() {
     if (bakOffice) {
-      bakOffice.compte.map(
-        (compte: { mail: string; password: string }, index: number) => {
-          if (compte.mail === email && compte.password === password) {
-            setBakOffice({ ...bakOffice, compteConnecter: index });
-            setmodalConnection(false);
-          }
-        },
+      // Vérifier si un compte avec cet email existe
+      const compteTrouve = bakOffice.compte.find(
+        (compte: { mail: string }) => compte.mail === email,
       );
+
+      if (!compteTrouve) {
+        // Si aucun compte avec cet email n'est trouvé
+        alert("Adresse e-mail non trouvée.");
+        return;
+      }
+
+      // Vérifier si le mot de passe correspond
+      if (compteTrouve.password !== password) {
+        // Si le mot de passe est incorrect
+        alert("Mot de passe incorrect.");
+        return;
+      }
+
+      // Si tout est correct, connecter le compte
+      const index = bakOffice.compte.indexOf(compteTrouve);
+      setBakOffice({ ...bakOffice, compteConnecter: index });
+      setmodalConnection(false);
     }
   }
 

@@ -14,16 +14,21 @@ function ReservedButton() {
   const { indexRoom } = UseIndexRoomContext();
 
   const handleClick = () => {
-    //choiri le nouvelle id de chambre
-    const newIdChambreSelect = copieApi[indexRoom].id;
-    if (bakOffice) {
-      setBakOffice({
-        ...bakOffice,
-        compteConnecter: bakOffice.compteConnecter ?? null,
-        idChambreSelect: newIdChambreSelect,
-      });
+    //verifier que un compte est connecter
+    if (bakOffice?.compteConnecter !== null) {
+      //choiri le nouvelle id de chambre
+      const newIdChambreSelect = copieApi[indexRoom].id;
+      if (bakOffice) {
+        setBakOffice({
+          ...bakOffice,
+          compteConnecter: bakOffice.compteConnecter ?? null,
+          idChambreSelect: newIdChambreSelect,
+        });
+      }
+      navigate("/reserve"); // Redirige vers la page /reserve
+    } else {
+      alert("Vous devez vous connecter pour réserver une chambre");
     }
-    navigate("/reserve"); // Redirige vers la page /reserve
   };
 
   return (
