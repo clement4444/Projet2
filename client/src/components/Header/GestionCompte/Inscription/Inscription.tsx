@@ -9,6 +9,7 @@ const Inscription: React.FC<InscriptionProps> = ({ SetpageInscription }) => {
   //charger le contexte de bakoffice
   const { bakOffice, setBakOffice } = UseBakOfficeContext();
 
+  //set les states
   const [prenom, setPrenom] = useState("");
   const [sexe, setSexe] = useState("");
   const [nom, setNom] = useState("");
@@ -19,29 +20,40 @@ const Inscription: React.FC<InscriptionProps> = ({ SetpageInscription }) => {
   const [ville, setVille] = useState("");
   const [adresse, setAdresse] = useState("");
 
+  function verifDoubleMail() {
+    return bakOffice?.compte
+      ? bakOffice.compte.some((compte) => compte.mail === mail)
+      : false;
+  }
+
   function inscription() {
     if (mail !== "" && motdePasse !== "") {
       if (bakOffice) {
-        setBakOffice({
-          ...bakOffice,
-          compte: [
-            ...bakOffice.compte,
-            {
-              mail: mail,
-              password: motdePasse,
-              sex: sexe,
-              prenom: prenom,
-              nom: nom,
-              adresse: adresse,
-              telephone: telephone,
-              codePostal: Number.parseInt(codePostal),
-              ville: ville,
-              reservation: [],
-              favorite: [],
-            },
-          ],
-        });
-        SetpageInscription(false);
+        // Vérifier si un compte avec cet email existe
+        if (!verifDoubleMail()) {
+          setBakOffice({
+            ...bakOffice,
+            compte: [
+              ...bakOffice.compte,
+              {
+                mail: mail,
+                password: motdePasse,
+                sex: sexe,
+                prenom: prenom,
+                nom: nom,
+                adresse: adresse,
+                telephone: telephone,
+                codePostal: Number.parseInt(codePostal),
+                ville: ville,
+                reservation: [],
+                favorite: [],
+              },
+            ],
+          });
+          SetpageInscription(false);
+        } else {
+          alert("ce compte existe déjà");
+        }
       }
     } else {
       alert("veuillez remplir toute les informations");
