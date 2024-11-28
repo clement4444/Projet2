@@ -7,6 +7,7 @@ import BtnValider from "../components/BakOffice/ReserverChambre/btnValider/bntVa
 
 const ReserveChambre = () => {
   return (
+  <div className="reservation">
     <div className="reservation-card">
       <div className="reservation-header">
         <h1>RESERVATION</h1>
@@ -23,6 +24,7 @@ const ReserveChambre = () => {
         <BtnValider />
       </div>
     </div>
+  </div>
   );
 };
 

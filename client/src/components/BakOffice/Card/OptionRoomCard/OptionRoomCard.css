@@ -1,0 +1,24 @@
+.option-room-card {
+  text-align: center;
+  margin: 5vw 0;
+  font-size: 2vw;
+}
+
+p {
+  font-size: 2vh;
+}
+
+.icon-grid {
+  display: grid;
+  gap: 2vw;
+  justify-items: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .option-room-card {
+    font-size: 3vw;
+    margin: 2vw auto;
+    width: 90%;
+  }
+}

@@ -1,0 +1,13 @@
+.BedRoom-Name {
+  font-size: 2vw;
+  margin: 0.75vw;
+  margin-top: -4vh;
+}
+
+@media (max-width: 768px) {
+  .BedRoom-Name {
+    font-size: 5.5vw;
+    margin: 2vw auto;
+    width: 90%;
+  }
+}

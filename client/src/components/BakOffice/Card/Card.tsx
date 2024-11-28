@@ -7,6 +7,7 @@ import PictureRoomCard from "./PictureRoomCard/PictureRoomCard";
 import PriceTotalCard from "./PriceTotalCard/PriceTotalCard";
 import SeparatorCard from "./SeparatorCard/SeparatorCard";
 import PriceRoomCard from "./priceRoomCard/priceRoomCard";
+import "./Card.css";
 
 const Card = () => {
   return (
@@ -15,7 +16,7 @@ const Card = () => {
         <div>
           <NbBedRoomCard />
           <NameRoomCard />
-          <p>Strasbourg, France</p>
+          <p className="Localisation">Strasbourg, France</p>
         </div>
         <PictureRoomCard />
       </div>

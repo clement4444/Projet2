@@ -1,0 +1,28 @@
+.nuits {
+  display: flex;
+  background-color: #dbdbdb;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  margin: 3vw auto;
+  border: none;
+  padding: 0.5vw;
+}
+
+.nuits select {
+  border: none;
+  background: transparent;
+  font-size: 2vw;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nuits {
+    padding: 2vw;
+    width: 90%;
+  }
+
+  .nuits select {
+    font-size: 7vw;
+  }
+}

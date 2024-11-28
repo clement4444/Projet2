@@ -1,0 +1,12 @@
+.room-name {
+  font-size: 1.5vw;
+  margin: 0vw 0.8vw;
+}
+
+@media (max-width: 768px) {
+  .room-name {
+    font-size: 5.25vw;
+    margin: 0.55vw auto;
+    width: 90%;
+  }
+}

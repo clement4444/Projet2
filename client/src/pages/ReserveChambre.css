@@ -1,4 +1,4 @@
-body {
+.reservation {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #ffffff;
@@ -9,45 +9,41 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 20px;
 }
 
 .reservation-card {
   background: rgb(245, 243, 243);
-  width: 130vh;
-  border-radius: 12px;
-  font-size: 20px;
+  width: 100%;
+  max-width: 1000px;
+  font-size: 16px;
+  margin: 0 auto;
 }
 
 .reservation-header {
   text-align: center;
-  padding: 25px;
-  border-bottom: 1px solid #000000;
+  padding: 20px;
 }
 
 .reservation-header h1 {
-  font-size: 35px;
-  margin-bottom: 60px;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #000000;
 }
 
 .temps {
   display: flex;
   justify-content: center;
-  gap: 30vh;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-.arrivé {
-  display: flex;
-  flex-direction: column;
-  font-size: 30px;
-  align-items: center;
-  color: #4f4f4f;
-}
-
+.arrivé,
 .départ {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  font-size: 30px;
+  font-size: 1.2rem;
+  align-items: center;
   color: #4f4f4f;
 }
 
@@ -56,20 +52,22 @@ body {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  font-size: 35px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-left: 10vh;
 }
 
 .nuits select {
   padding: 4px;
-  font-size: 20px;
+  font-size: 3em;
 }
 
 .details {
-  padding: 8px;
+  padding: 20px;
 }
 
 .details h2 {
-  font-size: 30px;
+  font-size: 1.5rem;
   margin: 8px 0;
 }
 
@@ -80,7 +78,7 @@ body {
 
 .location {
   color: #888;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .room-image {
@@ -94,42 +92,41 @@ body {
 }
 
 .reservation-footer {
-  padding: 16px;
-  border-top: 1px solid #ddd;
+  padding: 20px;
 }
 
 .prix {
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  margin-bottom: 5px;
-  gap: 10vh;
-  font-size: 30px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
 }
 
 .inclus ul {
   list-style: none;
   padding: 10px;
-  flex-wrap: wrap;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .inclus li {
   background: #ffffff;
-  padding: 0px 8px;
+  padding: 5px 10px;
   border-radius: 4px;
+  margin-bottom: 5px;
 }
 
 .valider {
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   background: #ffc107;
   color: rgb(0, 0, 0);
   border: none;
   border-radius: 8px;
-  font-size: 22px;
+  font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
 }

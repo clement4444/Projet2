@@ -1,3 +1,5 @@
+import "./BtnNbnuit.css";
+
 const BtnNbnuit = () => {
   return (
     <div className="nuits">

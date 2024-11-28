@@ -1,5 +1,11 @@
+import "./BtnValider.css";
+
 const BtnValider = () => {
-  return <button type="button">VALIDER MA RESERVATION</button>;
+  return (
+    <button type="button" className="bouton-valider">
+      VALIDER MA RÉSERVATION
+    </button>
+  );
 };
 
 export default BtnValider;
