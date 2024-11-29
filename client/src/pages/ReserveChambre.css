@@ -1,136 +1,57 @@
 .reservation {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-}
-
-.app-container {
+  background-color: white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  padding: 20px;
 }
 
 .reservation-card {
-  background: rgb(245, 243, 243);
   width: 100%;
-  max-width: 1000px;
-  font-size: 16px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .reservation-header {
-  text-align: center;
-  padding: 20px;
+  width: 100%;
 }
 
 .reservation-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #000000;
+  font-size: 2em;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 1em;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 4em;
+  }
 }
 
-.temps {
+.conterDate {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
+  justify-content: space-evenly;
+  margin-top: 1.5em;
 
-.arrivé,
-.départ {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.2rem;
-  align-items: center;
-  color: #4f4f4f;
-}
-
-.nuits {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  font-size: 1.2rem;
-  margin-top: 20px;
-  margin-left: 10vh;
-}
-
-.nuits select {
-  padding: 4px;
-  font-size: 3em;
+  @media screen and (min-width: 1024px) {
+    margin-top: 2em;
+  }
 }
 
 .details {
-  padding: 20px;
+  width: 85%;
+  margin-top: 2em;
+
+  @media screen and (min-width: 1024px) {
+    margin-top: 5em;
+  }
 }
 
-.details h2 {
-  font-size: 1.5rem;
-  margin: 8px 0;
-}
-
-.room-name {
-  font-weight: bold;
-  color: #555;
-}
-
-.location {
-  color: #888;
-  margin-bottom: 20px;
-}
-
-.room-image {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 16px;
-}
-
-.info p {
-  margin: 10px 0;
-}
+/* footer */
 
 .reservation-footer {
-  padding: 20px;
-}
-
-.prix {
   display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-}
-
-.inclus ul {
-  list-style: none;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  font-size: 1rem;
-}
-
-.inclus li {
-  background: #ffffff;
-  padding: 5px 10px;
-  border-radius: 4px;
-  margin-bottom: 5px;
-}
-
-.valider {
-  width: 100%;
-  padding: 15px;
-  background: #ffc107;
-  color: rgb(0, 0, 0);
-  border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.valider:hover {
-  background: #e0a800;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  margin: 2em 0;
 }

@@ -1,13 +1,8 @@
-.BedRoom-Name {
-  font-size: 2vw;
-  margin: 0.75vw;
-  margin-top: -4vh;
-}
+.BedRoom-Name-Card {
+  font-weight: bold;
+  margin-top: 0.3em;
 
-@media (max-width: 768px) {
-  .BedRoom-Name {
-    font-size: 5.5vw;
-    margin: 2vw auto;
-    width: 90%;
+  @media screen and (min-width: 1024px) {
+    font-size: 4vw;
   }
 }

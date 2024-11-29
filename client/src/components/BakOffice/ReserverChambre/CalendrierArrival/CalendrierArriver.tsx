@@ -1,24 +1,33 @@
-import { useState } from "react";
 import "./CalendrierArriver.css";
 
-const CalendrierArriver = () => {
-  const [date, setDate] = useState<string>("2024-11-29");
+interface CalendrierArriverProps {
+  arriver: string;
+  setArriver: (date: string) => void;
+}
 
+const CalendrierArriver: React.FC<CalendrierArriverProps> = ({
+  arriver,
+  setArriver,
+}) => {
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setDate(e.target.value);
+    setArriver(e.target.value);
   };
 
   return (
     <div className="arriver">
-      <img src="/images/logoOption/calendrier.png" alt="Arriver" />
-      {}
-      <input
-        type="date"
-        value={date}
-        onChange={handleDateChange}
-        className="arriver-date"
-      />
-      <span>{date}</span> {}
+      <div className="arriverInput">
+        <input
+          type="date"
+          value={arriver}
+          onChange={handleDateChange}
+          className="arriver-date"
+        />
+        <img src="/images/logoOption/calendrier.png" alt="Arriver" />
+      </div>
+      <span>
+        {typeof arriver === "string" &&
+          `${arriver.slice(8, 10)}/${arriver.slice(5, 7)}/${arriver.slice(0, 4)}`}
+      </span>
     </div>
   );
 };

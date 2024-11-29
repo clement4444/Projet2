@@ -1,28 +1,37 @@
 .arriver {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arriverInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arriver input {
+  font-size: 1.5em;
+  border: none;
+
+  @media screen and (min-width: 1024px) {
+    font-size: 3em;
+  }
 }
 
 .arriver img {
-  width: 0vw;
+  width: 150px;
+  height: auto;
+
+  @media screen and (min-width: 1024px) {
+    width: 300px;
+  }
 }
 
 .arriver span {
-  font-size: 0vw;
-}
+  font-size: 1.4em;
 
-.arriver input[type="date"] {
-  font-size: 2.5vw;
-  padding: 1vw;
-  background-color: transparent;
-  border: none;
-  margin-left: 1vw;
-  margin-top: -5vw;
-}
-
-@media (max-width: 1080px) {
-  .arriver input[type="date"] {
-    font-size: 7vw;
-    margin-left: 14vw;
-    margin-top: 8vh;
+  @media screen and (min-width: 1024px) {
+    font-size: 2em;
   }
 }

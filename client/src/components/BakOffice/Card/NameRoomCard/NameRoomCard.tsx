@@ -1,9 +1,12 @@
+import { UseApiContext } from "../../../../hooks/UseApi";
 import "./NameRoomCard.css";
 
-const NameRoomCard = () => {
+const NameRoomCard = ({ index }: { index: number }) => {
+  const { api } = UseApiContext();
+
   return (
     <>
-      <p className="room-name">La chambre industrielle</p>
+      <p className="room-name-Card">{api[index].nom}</p>
     </>
   );
 };

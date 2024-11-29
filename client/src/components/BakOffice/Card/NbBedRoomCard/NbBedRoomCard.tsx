@@ -1,10 +1,12 @@
 import "./NbBedRoomCard.css";
+import { UseApiContext } from "../../../../hooks/UseApi";
 
-const NbBedRoomCard = () => {
+const NbBedRoomCard = ({ index }: { index: number }) => {
+  const { api } = UseApiContext();
   return (
     <>
-      <p className="BedRoom-Name">
-        <strong>1 chambre • 2 personnes</strong>
+      <p className="BedRoom-Name-Card">
+        <strong>1 chambre • {api[index].capacite} personnes</strong>
       </p>
     </>
   );
