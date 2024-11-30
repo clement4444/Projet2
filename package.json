@@ -23,7 +23,7 @@
     "dev": "concurrently -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm:dev:*\"",
     "dev:client": "npm run dev --workspace=client",
     "dev:server": "npm run dev --workspace=server",
-    "prepare": "[ \"$CI\" = \"true\" ] || husky install",
+    "prepare": "if [ \"$VERCEL\" != \"1\" ]; then husky install; fi",
     "start": "npm run start --workspace=server",
     "test": "npm run test --workspaces --if-present"
   },
