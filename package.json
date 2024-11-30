@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/WildCodeSchool-2024-09/strasgite.git"
   },
+  "private": true,
   "workspaces": [
     "client",
     "server"
