@@ -10,4 +10,5 @@ export default defineConfig({
       '/projet2': 'https://api-univers-1rmkxnbib-clement4444s-projects.vercel.app', // Remplacez cette URL par l'URL de votre API
     },
   },
+  base: '/',
 });
